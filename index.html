@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Data Visualization</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Cryptocurrency Market Data</h1>
+        <div class="btn-group mt-3" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="selectPair('ethusdt')">ETH/USDT</button>
+            <button type="button" class="btn btn-primary" onclick="selectPair('bnbusdt')">BNB/USDT</button>
+            <button type="button" class="btn btn-primary" onclick="selectPair('dotusdt')">DOT/USDT</button>
+        </div>
+        <canvas id="myChart" class="mt-4"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

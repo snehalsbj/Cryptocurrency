@@ -1,8 +1,8 @@
 /* Global Styles for Dark Theme */
 body {
     font-family: Arial, sans-serif;
-    background: #001e4d; /* Dark background */
-    color:  hsl(217, 58%, 58%);;  /* Light text */
+    background: #001e4d;  /* Dark background */
+    color: hsl(217, 58%, 58%);  /* Light text */
     margin: 0;
     padding: 20px;
 }
@@ -15,6 +15,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);  /* Softer shadow for contrast */
+    transition: all 0.3s ease;
 }
 
 /* Heading */
@@ -35,6 +36,7 @@ canvas {
 }
 
 /* Button Styling for Dark Theme */
+/* Button Styling for Dark Theme */
 button {
     background-color: #000000;  /* Solid black background for buttons */
     border: none;
@@ -47,10 +49,6 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container button {
-    background-color: #000000;  /* Solid black background for buttons */
-}
-
 button:hover {
     background-color: #222222;  /* Dark gray on hover */
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);  /* Glow effect on hover */
@@ -60,19 +58,33 @@ button.active {
     background-color: #222222;  /* Active state is slightly darker */
     border: 2px solid #444444;  /* Subtle border for active button */
 }
+.container button {
+    background-color: #000000;  /* Solid black background for buttons */
+}
 
-/* Responsive Design */
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
     h1 {
         font-size: 2em;
+    }
+
+    .container {
+        padding: 10px;
+        max-width: 100%;  /* Full-width for mobile */
+    }
+
+    canvas {
+        height: 300px !important;  /* Reduce chart height on mobile */
     }
 
     button {
         padding: 8px 15px;
         font-size: 14px;
-    }
-
-    .container {
-        padding: 10px;
+        width: 100%;  /* Make buttons full-width on mobile */
+        margin-bottom: 10px;
     }
 }
